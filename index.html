@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>R&D in the Western Balkans</title>
+  <link href="https://unpkg.com/primer/build/build.css" rel="stylesheet" />
+  <!-- <link href="./custom.css" rel="stylesheet" /> -->
+</head>
+
+<body class="container text-center">
+
+  <header id="home">
+    <div class="blankslate">
+
+      <div class="bg-gray-dark text-white p-3">
+        <div class="border border-white-fade p-2">
+          <h1 class="heading">R&D in the Westen Balkans</h1>
+        </div>
+      </div>
+    </div>
+
+    <nav class="UnderlineNav">
+      <div class="UnderlineNav-body">
+        <a href="#explanation" class="UnderlineNav-item selected">Home</a>
+        <a href="#dataviz" class="UnderlineNav-item">Visualization</a>
+        <a href="#credits" class="UnderlineNav-item">About</a>
+      </div>
+
+    </nav>
+  </header>
+
+  <main role="main" class="inner">
+
+    <div class="blankslate">
+      <h2>Science and Technology panorama of the European region called Western Balkans</h2>
+    </div>
+
+    <p class="lead">The Western Balkans region involves several countries, each of them with different economies,
+      innovation policies and distinct scientific/technological production.</p>
+
+    <div class="Box text-left">
+      <h3 class="f2-light p-2">Context:</h3>
+      <br />
+
+      <h4 class="p-2">Countries:</h5>
+
+        <ul class="list-style-none">
+          <li class="p-3">Albania - Bosnia and Herzegovina - Kosovo - Macedonia - Montenegro - Serbia</li>
+        </ul>
+        <br />
+        <h4 class="p-2">Research programmes:</h4>
+        <ul class="list-style-none">
+
+          <li class="p-3"><a href="https://ec.europa.eu/cip/">CIP</a>: Competitiveness and Innovation Framework
+            Programme </li>
+          <li class="p-3"><a href="https://ec.europa.eu/programmes/creative-europe/about_en">Creative Europe</a>:
+            Supporting Europe's cultural and creative sectors
+          </li>
+          <li class="p-3"><a href="https://eacea.ec.europa.eu/creative-europe/actions/culture_en">Culture</a>:
+            Education, Audiovisual and Culture </li>
+          <li class="p-3"><a href="https://www.eurekanetwork.org/">Eureka</a>: International R&D&I cooperation </li>
+
+          <li class="p-3"><a
+              href="https://ec.europa.eu/research/fp7/understanding/fp7inbrief/what-is_en.html">FP7</a>:Framework
+            Programme for Research and Technological Development
+          </li>
+          <li class="p-3"><a href="https://ec.europa.eu/programmes/horizon2020/what-horizon-2020">H2020</a>: EU's
+            biggest
+            Framework Programme for Research and Innovation</li>
+          </p>
+    </div>
+
+
+    <div class="Box text-left">
+      <h3 class="f2-light p-2">Objetive:</h3>
+      <br />
+      <ul class="list-style-none">
+        <li class="p-3">Measure the potential for scientific collaboration between different actors</li>
+        <li class="p-3">Interactive information about tendencies, trends and leaders in each sector/activity</li>
+      </ul>
+      <h4 class="p-2">Aim:</h4>
+      <p class="p-2">What does these interactive visualizations address:</p>
+      <ul class="list-style-none">
+        <li class="p-3">
+          • How do the existing organizations collaborate together? how is this collaboration? there are main actors?
+          which
+          are the groups of organizations that tend to collaborate together? How the collaboration changes through the
+          different domains, areas, etc..?</li>
+        <li class="p-3">
+          • How has the R&I activity evolved over the years? which are the trends for the existing domains, intervention
+          areas or types of activity?</li>
+        <li class="p-3">
+          • Which are the main, most productive actors in Western Balkans? Which is its contribution relative to the
+          overall
+          R&I production?
+        </li>
+        </p>
+    </div>
+
+
+
+    <div class="Subhead" id="dataviz">
+      <div class="Subhead-heading">Visualization</div>
+      <p class="lead">This interactive visualization tool provides a user friendly interface, which combines overview of
+        the Research &
+        Innovation
+        activities produced by these countries and enable exploration of the level of collaboration between them .</p>
+      <p class="lead">Information about R&D projects across different EU programmes and its relationship with the
+        centers involved/affiliations are supported using different filters for selecting actors/timelines/project
+        characteristics as needed.</p>
+      <div class="Box">
+
+        <!-- <div class="Box-body">
+          <img src="img/dataviz-draft.png" />
+        </div> -->
+        <div id="observablehq-e95aa00c"></div>
+        <script type="module">
+          import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+          import define from "https://api.observablehq.com/@pilujander/node-links-force-directed-layout-graph.js?v=3";
+          const inspect = Inspector.into("#observablehq-e95aa00c");
+          (new Runtime).module(define, name => (name === "chart") && inspect());
+        </script>
+        <div id="viz1"></div>
+        <div id="viz2"></div>
+      </div>
+    </div>
+
+    <div class="Subhead" id="credits">
+      <div class="Subhead-heading">About</div>
+    </div>
+    <div class="Box text-left">
+      <h3 class="f2-light p-2">About the data:</h3>
+      <br />
+      <p class="lead p-3">
+
+
+        The following datasets describe the Research&Innovation activity of the Western Balkans region, as well
+        as information about the actors (universities, private companies, research centers, etc) participating in these
+        R&D activities.
+        <h4 class="p-2">Activities:</h4>
+
+
+
+        <ul class="list-style-none">
+          <li class="p-3">
+            • <span class="text-bold">riactivityId</span>: Unique identifier for a given activity</li>
+          <li class="p-3">
+            • <span class="text-bold">riactivityTypeName</span>: Descriptor of the activity. All values different from
+            'Patent' are considered R&I
+            projects
+            related to the different funding programmes promoted by the Europan Commision.
+          <li class="p-3">
+            • <span class="text-bold">year</span>: Starting year of the project</li>
+          <li class="p-3">
+            • <span class="text-bold">date</span>: Starting date of the project</li>
+          <li class="p-3">
+            • <span class="text-bold">domainName</span>: how this activity is classified based on a list of possible
+            domains</li>
+          <li class="p-3">
+            • <span class="text-bold">interventionAreaName</span>: how this activity is classified based on its area
+            of intervention
+          </li>
+          <h4 class="p-2">Participations:</h5>
+            <li class="p-3">
+              • <span class="text-bold">riactivityId</span>: Unique identifier for a given activity</li>
+            <li class="p-3">
+              • <span class="text-bold">affiliationName</span>: Name of the organization participating in the activity
+            </li>
+            <li class="p-3">
+              • <span class="text-bold">countryName</span>: country of the organization
+            </li>
+            <li class="p-3">
+              • <span class="text-bold">riactivityType</span>: Descriptor of the activity. All values different from
+              'Patent' are considered R&I
+              projects
+              related to the different funding programmes promoted by the Europan Commision.</li>
+
+      </p>
+      <h4 class="p-2">Source of dataset:
+        <a href="https://cordis.europa.eu/projects/es">https://cordis.europa.eu/projects/es</a>
+      </h4>
+      <br />
+      <h3 class="f2-light p-2">Tools used:</h3>
+
+      <ul class="list-style-none">
+        <li class="p-3"><a href="http://openrefine.org/">OpenRefine</a></li>
+        <li class="p-3"><a href="https://github.com/iNZightVIT/iNZight">iNZight</a></li>
+        <li class="p-3"><a href="https://d3js.org/">D3.js</a></li>
+        <li class="p-3"><a href="https://vega.github.io/vega-lite/">Vega Lite</a></li>
+      </ul>
+      <h3 class="f2-light p-2">Links:</h3>
+      <ul class="list-style-none">
+        <li class="p-3"><a href="https://mega.nz/#!bJERCAiC!KKCpPAWdH7rhBLTdtu2tbYONknwWJO1a4JQlq0PYqdg">Analysis
+            document</a></li>
+        <li class="p-3"><a href="https://mega.nz/#!HANzgAYA!oP11e3mo0VNTuD4aoIcsAoMqr_CMv8HEIQ6qbhP23Tc">Visualizations
+            draft</a>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <hr />
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>CC. Santiago Scalzadonna para SIRIS Academic</p>
+    </div>
+  </footer>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@5"></script>
+
+  <script src='lib/d3.js'></script>
+  <script src='lib/lodash.js'></script>
+  <script src="lib/vega-lite-api.min.js"></script>
+
+  <!-- <script src="src/viz1.js"></script> -->
+  <script src="src/viz2.js"></script>
+
+</body>
+
+</html>
